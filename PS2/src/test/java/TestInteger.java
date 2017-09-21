@@ -19,8 +19,7 @@ public class TestInteger {
 	MyInteger myInt31 = new MyInteger(31);
 	MyInteger myInt48 = new MyInteger(48);
 	MyInteger myInt31num2 = new MyInteger(31);
-	MyInteger myInt48num2 = new MyInteger(49);
-
+	MyInteger myInt48num2 = new MyInteger();
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 	}
@@ -38,8 +37,13 @@ public class TestInteger {
 	}
 
 	@Test
+	public void TestSet() {
+		myInt48num2.setiValue(49);
+		assertTrue(myInt48num2.isEquals(49));
+	}
+	@Test
 	public void TestPrime() {
-		
+
 		assertFalse(myInt1.isPrime());
 		assertFalse(myInt2.isPrime());
 		assertTrue(myInt3.isPrime());
@@ -76,6 +80,7 @@ public class TestInteger {
 	}
 	@Test
 	public void TestPrimeInt() {
+		assertFalse(MyInteger.isPrime(0));
 		assertTrue(MyInteger.isPrime(257));
 		assertTrue(MyInteger.isPrime(311));
 		assertFalse(MyInteger.isPrime(88));

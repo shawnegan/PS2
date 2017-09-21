@@ -8,6 +8,13 @@ public class MyInteger {
 		this.iValue = iValue;
 	}
 	
+	public MyInteger() {
+		
+	}
+	
+	public void setiValue(int iValue) {
+		this.iValue = iValue;
+	}
 	public int getiValue() {
 		return iValue;
 	}
